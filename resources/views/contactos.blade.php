@@ -1,9 +1,14 @@
 @vite('resources/css/app.css')
 
 <div class="bg-gray-100 min-h-screen flex flex-col items-center justify-center px-20">
-        <h1 class="font-bold text-3xl text-center my-8">Lista de contactos</h1>
 
-        <a href="/">Regresar</a>
+    <div class="flex flex-row gap-10">
+        <h1 class="font-bold text-3xl text-center my-8">Lista de contactos</h1>
+        <a href="/dashboard" class="my-8 py-1 px-2 rounded-3xl font-bold bg-indigo-500 hover:bg-indigo-800 text-white"> Regresar </a>
+    </div>
+        
+    
+
 
     <div class="bg-white shadow-2xl rounded-lg overflow-x-auto w-full mx-4">
         <table class="min-w-full divide-y divide-gray-200">

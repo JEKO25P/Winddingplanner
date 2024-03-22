@@ -2,7 +2,14 @@
 
 <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100 ">
     <div class="bg-white shadow-2xl rounded-lg p-8 max-w-md w-full ">
-        <h2 class="text-2xl font-bold mb-4 text-center">Agregar Contacto</h2>
+
+        <div class="flex flex-row mb-4 items-center justify-between">
+            <h2 class="text-2xl font-bold pl-20 text-center">Agregar Contacto</h2>  
+            <a href="/contactos" class="rounded-3xl px-1 mb-4 font-bold bg-indigo-500 hover:bg-indigo-800 text-white">X</a>
+
+        </div>
+        
+
         <form action="{{ route('contactos.store') }}" method="POST">
             @csrf
             <div class="mb-4">
