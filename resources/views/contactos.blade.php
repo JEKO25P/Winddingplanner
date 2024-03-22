@@ -18,6 +18,8 @@
                     <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Correo Electrónico</th>
                     <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Teléfono</th>
                     <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Empresa</th>
+                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
+
                 </tr>
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
@@ -27,7 +29,16 @@
                     <td class="px-6 py-4 whitespace-nowrap">{{ $contacto->correo_electronico }}</td>
                     <td class="px-6 py-4 whitespace-nowrap">{{ $contacto->telefono }}</td>
                     <td class="px-6 py-4 whitespace-nowrap">{{ $contacto->empresa }}</td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <form action="{{ route('contactos.destroy', $contacto->id) }}" method="POST" class="inline">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="bg-red-700 text-white rounded-md px-4 py-2">Eliminar</button>
+                        </form>
+                    </td>
                 </tr>
+
+                
                 @endforeach
             </tbody>
         </table>

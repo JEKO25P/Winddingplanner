@@ -12,7 +12,7 @@
                 
                     {{ __("You're logged in!") }}
                 </div>
-                <div class="px-32 pb-5">
+                <div class="px-32 pb-5 ">
                     <a href="/contactos" class="bg-indigo-500 hover:bg-indigo-800 text-white px-5 rounded-md font-bold"> Iniciar </a>
                 </div>
             </div>

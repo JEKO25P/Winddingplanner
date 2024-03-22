@@ -56,24 +56,28 @@ class ContactoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Contacto $contacto)
+    public function edit(string $id)
     {
-        //
+        
+        
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateContactoRequest $request, Contacto $contacto)
+    public function update(UpdateContactoRequest $request, string $id)
     {
-        //
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Contacto $contacto)
+    public function destroy(string $id)
     {
-        //
+        $contacto = Contacto::find($id);
+        $contacto->delete();
+
+        return redirect ('contactos');
     }
 }
